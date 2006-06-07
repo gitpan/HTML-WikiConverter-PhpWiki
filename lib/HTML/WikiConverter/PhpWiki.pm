@@ -5,7 +5,7 @@ use strict;
 
 use base 'HTML::WikiConverter';
 
-our $VERSION = '0.50';
+our $VERSION = '0.51';
 
 =head1 NAME
 
@@ -116,6 +116,9 @@ sub preprocess_node {
   my( $self, $node ) = @_;
   $self->strip_aname($node) if $node->tag eq 'a';
   $self->caption2para($node) if $node->tag eq 'caption';
+
+  # Bug 17550 (https://rt.cpan.org/Public/Bug/Display.html?id=17550)
+  $node->postinsert(' ') if $node->tag eq 'br' and $node->right and $node->right->tag eq 'br';
 }
 
 =head1 AUTHOR

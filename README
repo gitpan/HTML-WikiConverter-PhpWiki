@@ -1,5 +1,5 @@
-HTML::WikiConverter::PhpWiki version 0.50
-=========================================
+HTML::WikiConverter::PhpWiki
+============================
 
 HTML::WikiConverter::PhpWiki adds the PhpWiki dialect to
 HTML::WikiConverter allowing the conversion of HTML to PhpWiki markup.
@@ -20,21 +20,13 @@ There's also a web interface if you're so inclined:
 
   http://diberri.dyndns.org/html2wiki.html
 
-VERSION
+CHANGES IN 0.51
 
-This is HTML::WikiConverter::PhpWiki 0.50.
-
-Prior versions of HTML::WikiConverter supported the PhpWiki dialect
-out of the box. As of 0.50, each dialect was branched off into a
-separate CPAN package.
-
-CHANGES IN 0.50
-
-  * PhpWiki dialect now has its own CPAN package
+  * (bug #17550) "<br><br>" now becomes "%%% %%%"
 
 DEPENDENCIES
 
-  * HTML::WikiConverter version 0.50
+  * HTML::WikiConverter version 0.52
 
 INSTALLATION
 
